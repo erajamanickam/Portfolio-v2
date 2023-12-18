@@ -109,6 +109,7 @@ const Contact = () => {
             }
 
         } else {
+            alert('Please verify reCAPTCHA');
             console.log('Form validation failed.', formData);
         }
     };
