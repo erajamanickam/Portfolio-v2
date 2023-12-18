@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import 'animate.css';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+import PositionBg from './Components/PositionBg';
+import Experience from './Components/Experience';
+import Skills from './Components/Skills';
+import Footer from './Components/Footer';
+import Cta from './Components/Cta';
+import Contact from './Components/Contact';
+import Video from './Components/Video';
+import About from './Components/About';
+import Projects from './Components/Projects';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-slate-800'>
+      <PositionBg />
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Video />
+      <Cta />
+      <Contact />
+      <Footer />
     </div>
   );
 }
