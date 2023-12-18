@@ -1,9 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { UilLinkedin, UilGithub, UilYoutube, UilEnvelopeCheck, UilMobileAndroidAlt } from '@iconscout/react-unicons'
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const Contact = () => {
     const form = useRef();
+    const captchaRef = useRef(null)
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -88,14 +92,22 @@ const Contact = () => {
         if (validateForm()) {
             e.preventDefault();
             if (!validateForm()) return;
-            emailjs.sendForm('service_w4yhkhe', 'template_qwwdhwb', form.current, 'user_e6CZf4K6kU9TCU80qBwFO')
-                .then((result) => {
-                    alert('Thank You, I am shortly contact with you');
-                    window.location.reload();
-                }, (error) => {
-                    alert('Oops!. Try again later');
-                });
-            console.log('Form submitted:', formData);
+
+            if (process.env.REACT_APP_RECAPTCHA_SITE_KEY) {
+                const token = captchaRef.current.getValue();
+                captchaRef.current.reset();
+                console.log(token)
+                emailjs.sendForm('service_w4yhkhe', 'template_qwwdhwb', form.current, 'user_e6CZf4K6kU9TCU80qBwFO')
+                    .then((result) => {
+                        alert('Thank You, I am shortly contact with you');
+                        window.location.reload();
+                    }, (error) => {
+                        alert('Oops!. Try again later');
+                    });
+
+                console.log('Form submitted:', formData);
+            }
+
         } else {
             console.log('Form validation failed.', formData);
         }
@@ -221,6 +233,11 @@ const Contact = () => {
                         ></textarea>
                     </div>
 
+
+                    <ReCAPTCHA
+                        sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                        ref={captchaRef}
+                    />
                     <button type='submit' className="py-0 px-7 h-[2.6em] transition-all duration-150 ease-in-out shadow-lg focus:outline-none font-size-[18px] inline-block outline-none border-none cursor-pointer will-change-[box-shadow,transform] bg-gradient-to-r text-white from-[#89E5FF] to-[#5468FF] shadow-indigo-500/50 rounded-full hover:transform hover:-translate-y-1 hover:shadow-lg">
                         Submit
                     </button>

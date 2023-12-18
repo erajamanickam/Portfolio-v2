@@ -44,7 +44,7 @@ const Projects = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-white text-center mb-4 animate__animated animate__jackInTheBox">Projects</h2>
                 <p className="text-lg text-gray-400 mb-8 text-center">
-                    Explore my personal project, a dynamic and interactive <a href="https://github.com/erajamanickam" target="_blank" className='text-[#61DAFB] hover:text-white mr-2' rel="noopener noreferrer">Github</a>that showcases my skills in React, Node.js, and responsive UI design. Witness firsthand how I merge creativity with technology to craft a seamless and engaging user experience.
+                    Explore my personal project, a dynamic and interactive <a href="https://github.com/erajamanickam" rel="noreferrer" className='text-[#61DAFB] hover:text-white mr-2' rel="noopener noreferrer">Github</a>that showcases my skills in React, Node.js, and responsive UI design. Witness firsthand how I merge creativity with technology to craft a seamless and engaging user experience.
                 </p>
                 <div className="flex flex-wrap -mx-4">
                     {projects.map((project) => (
