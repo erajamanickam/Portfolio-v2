@@ -35,7 +35,7 @@ const Video = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">The Videos</h2>
                 <p className="text-lg text-gray-400 mb-8 text-center">
-                    Dive into my <a href="https://www.youtube.com/@rajamanickamweb" target="_blank" className='text-[#61DAFB] hover:text-white mr-2' rel="noopener noreferrer">YouTube channel</a>for exclusive web development tutorials. I share insights, tips, and hands-on guidance to help you master the art of modern web development.
+                    Dive into my <a href="https://www.youtube.com/@rajamanickamweb" target="_blank" rel="noreferrer" className='text-[#61DAFB] hover:text-white mr-2'>YouTube channel</a>for exclusive web development tutorials. I share insights, tips, and hands-on guidance to help you master the art of modern web development.
                 </p>
                 {!isPlaying ? (
                     <div className="relative border-[20px] rounded-[50px] border-slate-600">
