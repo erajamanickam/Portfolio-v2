@@ -101,6 +101,7 @@ const Contact = () => {
 
         if (!isRecaptchaVerified) {
             console.error('reCAPTCHA verification failed.');
+            setSubmissionError('');
             return;
         }
 
