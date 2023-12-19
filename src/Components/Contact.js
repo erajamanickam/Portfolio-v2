@@ -99,31 +99,43 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!isRecaptchaVerified) {
-            console.error('reCAPTCHA verification failed.');
-            setSubmissionError('');
-            return;
-        }
 
-        setSubmissionError('');
         try {
-            if (validateForm() && captchaRef.current && captchaRef.current.getValue()) {
-                const token = captchaRef.current.getValue();
-                captchaRef.current.reset();
 
-                emailjs.sendForm('service_w4yhkhe', 'template_qwwdhwb', e.target, 'user_e6CZf4K6kU9TCU80qBwFO')
-                    .then((result) => {
-                        alert('Thank You, I am shortly contact with you');
-                        window.location.reload();
-                    }, (error) => {
-                        alert('Oops!. Try again later');
-                    });
+            if (validateForm()) {
+                console.log('vliadation true')
+                if (captchaRef.current && captchaRef.current.getValue()) {
 
-                console.log('Form submitted:', formData);
+
+
+                    console.log(validateForm(), captchaRef.current, captchaRef.current.getValue());
+                    const token = captchaRef.current.getValue();
+                    captchaRef.current.reset();
+
+                    emailjs.sendForm('service_w4yhkhe', 'template_qwwdhwb', e.target, 'user_e6CZf4K6kU9TCU80qBwFO')
+                        .then((result) => {
+                            alert('Thank You, I am shortly contact with you');
+                            window.location.reload();
+                        }, (error) => {
+                            alert('Oops!. Try again later');
+                        });
+
+                    console.log('Form submitted:', formData);
+                } else {
+                    if (!isRecaptchaVerified) {
+                        console.error('reCAPTCHA verification failed.');
+                        setSubmissionError('');
+                        return;
+                    }
+
+                    setSubmissionError('');
+                    console.log('reCAPTCHA verification failedsss');
+                }
             } else {
                 setSubmissionError('reCAPTCHA verification failed. Please verify and submit again.');
             }
         } catch (error) {
+            console.log('catch');
             console.error('Form submission error:', error.message);
             setSubmissionError('An error occurred during form submission. Please try again.');
         }
