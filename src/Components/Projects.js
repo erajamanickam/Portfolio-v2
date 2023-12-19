@@ -13,7 +13,7 @@ const Projects = () => {
             icon: doctoruiIcon,
             title: 'Doctor Appointment',
             description: 'A doctor appointment app can help doctors to manage their patients...',
-            link: 'https://example.com/project1',
+            link: 'https://github.com/erajamanickam/booking-appointment',
         },
         {
             id: 2,
@@ -36,7 +36,6 @@ const Projects = () => {
             description: 'A login screen is a user interface that is displayed when a user...',
             link: 'https://codepen.io/erajamanickam/pen/NWeRZzx',
         },
-        // Add more projects as needed
     ];
 
     return (

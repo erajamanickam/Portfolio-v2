@@ -103,11 +103,8 @@ const Contact = () => {
         try {
 
             if (validateForm()) {
-                console.log('vliadation true')
+                console.log('valiadation true')
                 if (captchaRef.current && captchaRef.current.getValue()) {
-
-
-
                     console.log(validateForm(), captchaRef.current, captchaRef.current.getValue());
                     const token = captchaRef.current.getValue();
                     captchaRef.current.reset();
@@ -122,17 +119,18 @@ const Contact = () => {
 
                     console.log('Form submitted:', formData);
                 } else {
-                    if (!isRecaptchaVerified) {
-                        console.error('reCAPTCHA verification failed.');
-                        setSubmissionError('');
-                        return;
-                    }
+                    // if (!isRecaptchaVerified) {
+                    //     console.error('reCAPTCHA verification failed.');
+                    //     setSubmissionError('');
+                    //     return;
+                    // }
 
-                    setSubmissionError('');
-                    console.log('reCAPTCHA verification failedsss');
+                    // setSubmissionError('');
+                    // console.log('reCAPTCHA verification failedsss');
+                    setSubmissionError('Please verify reCAPTCHA');
                 }
             } else {
-                setSubmissionError('reCAPTCHA verification failed. Please verify and submit again.');
+                setSubmissionError('Please verify reCAPTCHA');
             }
         } catch (error) {
             console.log('catch');
@@ -267,9 +265,9 @@ const Contact = () => {
                         ref={captchaRef}
                         onChange={handleRecaptchaChange}
                     />
-                    {submissionError && <div className="text-red-500">{submissionError}</div>}
+                    {submissionError && <div className="text-red-600 text-xs mb-2">{submissionError}</div>}
 
-                    <button type='submit' className="py-0 px-7 h-[2.6em] transition-all duration-150 ease-in-out shadow-lg focus:outline-none font-size-[18px] inline-block outline-none border-none cursor-pointer will-change-[box-shadow,transform] bg-gradient-to-r text-white from-[#89E5FF] to-[#5468FF] shadow-indigo-500/50 rounded-full hover:transform hover:-translate-y-1 hover:shadow-lg">
+                    <button type='submit' className="mt-2 py-0 px-7 h-[2.6em] transition-all duration-150 ease-in-out shadow-lg focus:outline-none font-size-[18px] inline-block outline-none border-none cursor-pointer will-change-[box-shadow,transform] bg-gradient-to-r text-white from-[#89E5FF] to-[#5468FF] shadow-indigo-500/50 rounded-full hover:transform hover:-translate-y-1 hover:shadow-lg">
                         Submit
                     </button>
                 </form>
