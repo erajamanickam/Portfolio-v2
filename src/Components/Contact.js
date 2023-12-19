@@ -33,7 +33,6 @@ const Contact = () => {
             [name]: value,
         }));
 
-        // Clear the corresponding error when user starts typing
         setErrors((prevErrors) => ({
             ...prevErrors,
             [name]: '',
@@ -81,6 +80,7 @@ const Contact = () => {
         setErrors(newErrors);
         return isValid;
     };
+
     const getInputBorderColor = (inputName) => {
         // Use Tailwind CSS classes to set border color based on validation status
         if (errors[inputName]) {
@@ -99,9 +99,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-
         try {
-
             if (validateForm()) {
                 console.log('valiadation true')
                 if (captchaRef.current && captchaRef.current.getValue()) {
@@ -117,24 +115,15 @@ const Contact = () => {
                             alert('Oops!. Try again later');
                         });
 
-                    console.log('Form submitted:', formData);
+                    // console.log('Form submitted:', formData);
                 } else {
-                    // if (!isRecaptchaVerified) {
-                    //     console.error('reCAPTCHA verification failed.');
-                    //     setSubmissionError('');
-                    //     return;
-                    // }
-
-                    // setSubmissionError('');
-                    // console.log('reCAPTCHA verification failedsss');
                     setSubmissionError('Please verify reCAPTCHA');
                 }
             } else {
                 setSubmissionError('Please verify reCAPTCHA');
             }
         } catch (error) {
-            console.log('catch');
-            console.error('Form submission error:', error.message);
+            // console.error('Form submission error:', error.message);
             setSubmissionError('An error occurred during form submission. Please try again.');
         }
     };
@@ -244,7 +233,6 @@ const Contact = () => {
                             </div>
                         </div>
 
-
                     </div>
 
                     <div className="mb-4">
@@ -258,7 +246,6 @@ const Contact = () => {
                             className="w-full border-2 border-solid border-[#ffffff26] focus:border-[#cc00ff] p-2 rounded-md bg-transparent outline-0 text-white"
                         ></textarea>
                     </div>
-
 
                     <ReCAPTCHA
                         sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
