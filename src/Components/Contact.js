@@ -101,7 +101,6 @@ const Contact = () => {
 
         try {
             if (validateForm()) {
-                console.log('valiadation true')
                 if (captchaRef.current && captchaRef.current.getValue()) {
                     console.log(validateForm(), captchaRef.current, captchaRef.current.getValue());
                     const token = captchaRef.current.getValue();
@@ -120,7 +119,7 @@ const Contact = () => {
                     setSubmissionError('Please verify reCAPTCHA');
                 }
             } else {
-                setSubmissionError('Please verify reCAPTCHA');
+                // setSubmissionError('Please verify reCAPTCHA');
             }
         } catch (error) {
             // console.error('Form submission error:', error.message);

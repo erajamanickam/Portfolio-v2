@@ -13,6 +13,7 @@ const Video = () => {
         width: '100%',
         playerVars: {
             autoplay: 1,
+            rel: 0
         },
     };
 
