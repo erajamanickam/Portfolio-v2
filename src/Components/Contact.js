@@ -119,7 +119,7 @@ const Contact = () => {
                     setSubmissionError('Please verify reCAPTCHA');
                 }
             } else {
-                // setSubmissionError('Please verify reCAPTCHA');
+                setSubmissionError('Please verify reCAPTCHA');
             }
         } catch (error) {
             // console.error('Form submission error:', error.message);
