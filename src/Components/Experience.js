@@ -46,7 +46,7 @@ const Experience = () => {
                                     />
                                 </div>
                                 <h3 className="text-xl md:text-xl text-white md:text-left text-center font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full justify-center self-center">{experience.position}<span className='block text-slate-400 text-base'>{experience.companyName}</span></h3>
-                                <p className="text-white font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full text-lg md:text-lg flex justify-center self-center items-center "><UilClock size="23" className='text-gray-400 hover:text-slate-500 mr-2' /> {experience.duration}</p>
+                                <p className="text-white font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full text-lg md:text-lg flex justify-center self-center items-center "><UilClock size="23" className='text-gray-400 mr-2' /> {experience.duration}</p>
                                 <p className="text-lg text-gray-400 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full self-center flex justify-center items-center"><UilLocationPoint size="23" className='text-gray-400 hover:text-slate-500 mr-1' /> {experience.location}</p>
                             </div>
                         </div>
