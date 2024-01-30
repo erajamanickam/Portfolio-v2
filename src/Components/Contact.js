@@ -129,9 +129,9 @@ const Contact = () => {
 
     return (
         <section className='py-12 z-20 relative' id='contact'>
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">Contact Us</h2>
-                <p className="text-lg text-gray-400 mb-4 text-center">
+                <p className="text-lg text-gray-300 mb-4 text-center">
                     Ready to turn your ideas into reality? Whether you're looking to hire a dedicated professional or discuss your next project, I'm here for you. Let's connect and make it happen!
                 </p>
                 <ul className='mb-4'>
