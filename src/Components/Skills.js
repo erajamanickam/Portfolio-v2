@@ -11,7 +11,7 @@ import cssLogo from '../../src/images/css.png'
 const Skills = () => {
     return (
         <section className="py-12 z-20 relative" id='skills'>
-            <div className="container mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 <h2 className="text-3xl font-bold text-white mb-8 text-center animate__animated animate__jackInTheBox">Skills</h2>
                 <div className='flex flex-wrap mx-[-15px] justify-center'>
                     <div className='sm:basis-1/5 basis-2/5 sm:w-1/4 w-1/2 rounded-xl mb-7 mt-0 mx-4 bg-[linear-gradient(180deg,_#01d2f870_0%,_#1f1e1c99_67%)]'>

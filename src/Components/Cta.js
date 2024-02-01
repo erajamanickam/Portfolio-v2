@@ -5,7 +5,7 @@ import ctaTest from '../images/cta-banner.png'
 const Cta = () => {
     return (
         <section className='py-12 z-20 relative'>
-            <div className='container mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+            <div className='container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8'>
                 <div className='rounded-3xl	relative bg-[linear-gradient(264.28deg,_#dec7ff_0%,_#5c27fe_103%)]'>
                     <div className='relative p-7 z-[1]'>
                         <h4 className='text-white text-3xl	font-semibold mb-2'>Do you went Hire me?</h4>

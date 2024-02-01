@@ -33,7 +33,7 @@ const Video = () => {
 
     return (
         <section className='py-12 z-20 relative'>
-            <div className="container mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">The Videos</h2>
                 <p className="text-lg text-gray-300 mb-8 text-center">
                     Dive into my <a href="https://www.youtube.com/@rajamanickamweb" target="_blank" rel="noreferrer" className='text-[#61DAFB] hover:text-white mr-2'>YouTube channel</a>for exclusive web development tutorials. I share insights, tips, and hands-on guidance to help you master the art of modern web development.

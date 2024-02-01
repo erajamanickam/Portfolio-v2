@@ -4,7 +4,7 @@ import videoThumb from '../../src/images/about-thumb.jpg'
 const About = () => {
     return (
         <section className="py-12 z-20 relative" id='about'>
-            <div className="container mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 <div className="w-11/12 md:w-full mx-auto text-center mb-4 md:mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">About Me</h2>
                     <p className='text-gray-300 font-medium text-center md:text-justify text-lg md:text-xl mb-4'>Hello, I'm <span className='bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>Rajamanickam</span>, a Web Application Developer with over 3 years of hands-on experience. My expertise lies in crafting dynamic user interfaces using technologies like React, Node.js, and popular CSS frameworks such as Tailwind CSS and Bootstrap. Primary focus has been on translating UX designs into polished UI implementations with functionality. My journey in the tech world has taken me through diverse sectors, including Banking, Education, Ecommerce, Hospital, and Agency domains.</p>

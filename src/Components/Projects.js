@@ -40,7 +40,7 @@ const Projects = () => {
 
     return (
         <section className="py-12 z-20 relative" id='projects'>
-            <div className="container mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 <h2 className="text-3xl font-bold text-white text-center mb-4 animate__animated animate__jackInTheBox">Projects</h2>
                 <p className="text-lg text-gray-300 mb-8 text-center">
                     Explore my personal project, a dynamic and interactive <a href="https://github.com/erajamanickam" rel="noreferrer" className='text-[#61DAFB] hover:text-white mr-2'>Github</a>that showcases my skills in React, Node.js, and responsive UI design. Witness firsthand how I merge creativity with technology to craft a seamless and engaging user experience.
