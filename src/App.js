@@ -15,24 +15,24 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 
 
-ReactGA.initialize('G-P52FG9L651');
+// ReactGA.initialize('G-P52FG9L651');
 
 
 function App() {
 
-  const TrackPageViews = () => {
-    const location = useLocation();
-    useEffect(() => {
-      ReactGA.pageview(location.pathname);
-      console.log('GA Processed');
-    }, [location]);
-    return null;
-  };
+  // const TrackPageViews = () => {
+  //   const location = useLocation();
+  //   useEffect(() => {
+  //     ReactGA.pageview(location.pathname);
+  //     console.log('GA Processed');
+  //   }, [location]);
+  //   return null;
+  // };
 
   return (
     <>
       <div className='bg-slate-800'>
-        <TrackPageViews />
+        {/* <TrackPageViews /> */}
         <PositionBg />
         <Navbar />
         <Hero />
