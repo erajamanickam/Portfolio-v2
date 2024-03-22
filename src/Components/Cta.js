@@ -18,7 +18,7 @@ const Cta = () => {
                         </Link>
 
                     </div>
-                    <img className='static md:absolute right-[16px] top-[-90px] w-[360px]' src={ctaTest} alt="" />
+                    <img className='static md:absolute right-[16px] top-[-90px] w-[360px]' src={ctaTest} alt="Hire a Web Developer" />
                 </div>
             </div>
         </section>

@@ -16,4 +16,6 @@ body {
     font-family: "Readex Pro Regular";
 }
 
-.grecaptcha-badge { visibility: hidden; }
+.grecaptcha-badge {
+    visibility: hidden;
+}
